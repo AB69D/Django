@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration </title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <table>
+            {{form}}
+        </table>
+        <div>
+
+        </div>
+        <label for="{{form.name.id_for_label}}">Name:</label>
+        <input type="text name" name="name" required=" id_name ">
+
+        <div>
+            {{form.name.value}}
+        </div>
+        <div>
+            {{form.name.label}}
+        </div>
+        <div>
+            {{form.name.lable_tag}}
+        </div>
+        <div>
+            {{form.name.html_name}}
+        </div>
+        <div>
+            {{form.name.field.required}}
+        </div>
+
+        <div>
+            {% for field in form.hiden_fields %} {{firld.form}} {% endfor %}
+        </div>
+
+        <!-- <hr> {{form.as_table}}
+            <hr>{{form.as_p}}
+            <hr>{{form.as_li}}
+            <hr>{{form.as_ul}}
+            <hr><input type="submit " value="Submit "> -->
+    </form>
+</body>
+
+</html>
