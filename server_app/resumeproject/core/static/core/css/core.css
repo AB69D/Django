@@ -1,0 +1,19 @@
+    /*fort*/
+    
+    .st-fort {
+        font-family: 'Satisfy', cursive;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .container-fluid {
+        min-height: 100%;
+    }
+    /* service icone color*/
+    
+    .i-color {
+        color: aqua;
+    }
