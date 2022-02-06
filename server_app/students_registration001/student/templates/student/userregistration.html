@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <form action="" method="POST">
-        {% csrf_token %} {{form.as_p}}
+    <form action="" method="POST" novalidate>
+        {% csrf_token %} {{form.non.field_errors}} {% for field in form %}
+        <div>{{field.label_tag}} {{field}} {{field.errors}}</div> {% endfor %}
         <input type="submit" value="Submit">
     </form>
 </body>

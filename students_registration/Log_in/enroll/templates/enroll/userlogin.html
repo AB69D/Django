@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        .a_sign {
+            color: rgb(0, 247, 255)
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" novalidate> {% csrf_token %} {% if form.non_field.errors %} {% for error in form.non_field.errors %} {{error}} {% endfor %}{% endif %}{% for fm in form %} {{ fm.label_tag }} {{ fm }} {{ fm.errors|striptags }}
+        <br><br> {% endfor %}
+
+        <input type="submit" value="Login"> <br><br>
+    </form>
+    <div>
+        <p>If you are new user,
+            <small><a href="{% url 'signup' %}" class="a_sign">Sign_up</a></small>
+        </p>
+    </div>
+</body>
+
+</html>
