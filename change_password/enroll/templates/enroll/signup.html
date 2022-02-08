@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigh_up</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        {% csrf_token %} {% for fm in form %} {{fm.label_tag}}{{fm}}{{fm.errors|striptags}} <br><br>{% endfor %}
+        <input type="submit" class="submit" value="Submit">{% if messages %} {% for mass in messages %} <small class="message_tag">{{mass}}</small>{% endfor %}{% endif %}<br><br>
+    </form>
+
+    <a href="{% url 'login' %}"> <input type="button" value="Log_in"></a>
+</body>
+
+</html>
