@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get cookies </title>
+</head>
+<body>
+    <div> <h4>Name :  {{user}} <br><div> email : {{email}}</div><br><hr>
+        <div class="mx-5">{% for key in keys %}
+        <h4> sessions key ->  {{key}}</h4>
+        {% endfor %}</div><br><hr>
+        
+        <div class="mx-5">{% for key , value in items %}
+        <h4> session key ->  {{key}}  session value -> {{value}}</h4>
+        {% endfor %}</div>
+    </h4>
+</div>
+
+</body>
+</html>
